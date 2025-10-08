@@ -75,6 +75,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
         [
             {"current": {"uuid": ANY, "user_key": "address_property"}},
             {"current": {"uuid": ANY, "user_key": "association_type"}},
+            {"current": {"uuid": ANY, "user_key": "confederation"}},
             {"current": {"uuid": ANY, "user_key": "employee_address_type"}},
             {"current": {"uuid": ANY, "user_key": "engagement_job_function"}},
             {"current": {"uuid": ANY, "user_key": "engagement_type"}},
@@ -92,6 +93,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
             {"current": {"uuid": ANY, "user_key": "responsibility"}},
             {"current": {"uuid": ANY, "user_key": "role"}},
             {"current": {"uuid": ANY, "user_key": "time_planning"}},
+            {"current": {"uuid": ANY, "user_key": "trade_union"}},
             {"current": {"uuid": ANY, "user_key": "visibility"}},
         ],
     )
