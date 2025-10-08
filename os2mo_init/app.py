@@ -62,6 +62,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
     facets = {
         "address_property",
         "association_type",
+        "confederation",
         "employee_address_type",
         "engagement_job_function",
         "engagement_type",
@@ -79,6 +80,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
         "responsibility",
         "role",
         "time_planning",
+        "trade_union",
         "visibility",
     }
     await ensure_facets(graphql_client, facets)
