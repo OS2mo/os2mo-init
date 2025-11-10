@@ -18,6 +18,7 @@ class ConfigClass(BaseModel):
     title: str
     scope: str | None
     it_system: str | None
+    description: str | None
 
 
 class ConfigFacet(BaseModel):

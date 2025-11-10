@@ -32,6 +32,7 @@ def test_get_config_file(config_file: Path) -> None:
                 "PhoneUnit": {
                     "scope": "PHONE",
                     "title": "Telefon",
+                    "description": None,
                     "it_system": "OS2mo",
                 },
             }

@@ -109,6 +109,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
                     "facet": {"user_key": "org_unit_address_type"},
                     "user_key": "PhoneUnit",
                     "name": "Telefon",
+                    "description": None,
                     "scope": "PHONE",
                     "it_system": {"uuid": ANY, "user_key": "OS2mo"},
                 }
@@ -123,6 +124,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
                     "facet": {"user_key": "visibility"},
                     "user_key": "Public",
                     "name": "Må vises eksternt",
+                    "description": None,
                     "scope": "PUBLIC",
                     "it_system": None,
                 }
@@ -137,6 +139,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
                     "facet": {"user_key": "visibility"},
                     "user_key": "Intern",
                     "name": "Må vises internt",
+                    "description": None,
                     "scope": "INTERNAL",
                     "it_system": None,
                 }
@@ -188,6 +191,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
                     "facet": {"user_key": "org_unit_address_type"},
                     "user_key": "PhoneUnit",
                     "name": "Telefono Cellulare",
+                    "description": None,
                     "scope": "TEXT",
                     "it_system": {"uuid": ANY, "user_key": "LDAP"},
                 }
@@ -202,6 +206,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
                     "facet": {"user_key": "visibility"},
                     "user_key": "Intern",
                     "name": "TOP SECRET",
+                    "description": None,
                     "scope": "SECRET",
                     "it_system": {"uuid": ANY, "user_key": "OS2mo"},
                 }

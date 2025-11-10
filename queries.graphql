@@ -21,6 +21,7 @@ mutation CreateClassMutation(
   $facet_uuid: UUID!
   $user_key: String!
   $name: String!
+  $description: String
   $scope: String
   $it_system_uuid: UUID
 ) {
@@ -29,6 +30,7 @@ mutation CreateClassMutation(
       facet_uuid: $facet_uuid
       user_key: $user_key
       name: $name
+      description: $description
       scope: $scope
       it_system_uuid: $it_system_uuid
       validity: { from: null }
@@ -43,6 +45,7 @@ mutation UpdateClassMutation(
   $uuid: UUID!
   $user_key: String!
   $name: String!
+  $description: String
   $scope: String
   $it_system_uuid: UUID
 ) {
@@ -52,6 +55,7 @@ mutation UpdateClassMutation(
       facet_uuid: $facet_uuid
       user_key: $user_key
       name: $name
+      description: $description
       scope: $scope
       it_system_uuid: $it_system_uuid
       validity: { from: null }
@@ -128,6 +132,7 @@ query get_class($facet_user_key: String!, $class_user_key: String!) {
         uuid
         user_key
         name
+        description
         scope
         it_system {
           uuid

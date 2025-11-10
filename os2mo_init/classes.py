@@ -57,6 +57,7 @@ async def ensure_classes(
                     facet_uuid=existing_facets_by_user_key[facet_user_key],
                     user_key=class_user_key,
                     name=class_data.title,
+                    description=class_data.description,
                     scope=class_data.scope,
                     it_system_uuid=it_system_uuid,
                 )
@@ -70,6 +71,7 @@ async def ensure_classes(
                 existing.name != class_data.title
                 or existing.scope != class_data.scope
                 or existing_it_system_uuid != class_data.it_system
+                or existing.description != class_data.description
             ):
                 logger.info("Updating class", data=class_data)
                 await client.update_class_mutation(
@@ -77,6 +79,7 @@ async def ensure_classes(
                     uuid=existing.uuid,
                     user_key=class_user_key,
                     name=class_data.title,
+                    description=class_data.description,
                     scope=class_data.scope,
                     it_system_uuid=it_system_uuid,
                 )
