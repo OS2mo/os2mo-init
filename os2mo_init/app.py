@@ -59,7 +59,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
     # Even though facets are objects in the database equal to classes, they are
     # hard-coded everywhere. For this reason, OS2mo-init will *always* create this
     # expected set of facets.
-    facets = {
+    default_facets = {
         "address_property",
         "association_type",
         "confederation",
@@ -83,6 +83,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
         "trade_union",
         "visibility",
     }
+    facets = default_facets | (config.facets or {}).keys()
     await ensure_facets(graphql_client, facets)
 
     # Classes
