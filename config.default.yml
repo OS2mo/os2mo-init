@@ -47,10 +47,10 @@ facets:
       title: "Primær"
       scope: "3000"
     non-primary:
-      title: "Ikke-primær ansættelse"
+      title: "Ikke-primær"
       scope: "0"
     explicitly-primary:
-      title: "Manuelt primær ansættelse"
+      title: "Manuelt primær"
       scope: "5000"
 
 #it_systems:
