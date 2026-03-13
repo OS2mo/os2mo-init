@@ -65,6 +65,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
         "confederation",
         "employee_address_type",
         "engagement_job_function",
+        "engagement_job_function_bvn",
         "engagement_type",
         "kle_aspect",
         "kle_number",
