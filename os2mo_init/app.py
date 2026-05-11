@@ -36,7 +36,7 @@ def create_clients(settings: Settings) -> tuple[AsyncOAuth2Client, GraphQLClient
         timeout=settings.graphql_timeout,
     )
     # GraphQL Client
-    graphql_version = 20  # grep-compatibility with our other integrations
+    graphql_version = 21  # grep-compatibility with our other integrations
     graphql_client = GraphQLClient(
         url=f"{settings.mo_url}/graphql/v{graphql_version}",
         http_client=mo_client,
