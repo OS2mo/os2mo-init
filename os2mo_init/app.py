@@ -81,6 +81,7 @@ async def init(config: ConfigFile, graphql_client: GraphQLClient) -> None:
         "responsibility",
         "role",
         "time_planning",
+        "title",
         "trade_union",
         "visibility",
     }

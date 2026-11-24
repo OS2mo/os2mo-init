@@ -87,6 +87,7 @@ async def test_os2mo_init(config_file: Path, graphql_client: GraphQLClient) -> N
             {"current": {"uuid": ANY, "user_key": "responsibility"}},
             {"current": {"uuid": ANY, "user_key": "role"}},
             {"current": {"uuid": ANY, "user_key": "time_planning"}},
+            {"current": {"uuid": ANY, "user_key": "title"}},
             {"current": {"uuid": ANY, "user_key": "trade_union"}},
             {"current": {"uuid": ANY, "user_key": "visibility"}},
         ],
