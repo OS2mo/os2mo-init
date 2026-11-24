@@ -5,6 +5,9 @@ variables:
   RELEASE_REGISTRY_IMAGE: index.docker.io/magentaaps/os2mo-init
   IMAGE_SHA: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}
 
+  PRODUCT: os2mo
+  COMPONENT: init
+
   PRECOMMIT_USE_POETRY: "true"
   POETRY_VERSION: "1.8"
   PYTEST_COV_MODULE: os2mo_init
@@ -21,6 +24,7 @@ stages:
   - test
   - coverage
   - release
+  - deploy
 
 
 # Global Conditions
@@ -54,6 +58,8 @@ include:
       - gitlab-ci-templates/python/pytest.v2.yml
       - gitlab-ci-templates/common/docker-build.v1.yml
       - gitlab-ci-templates/common/docker-release.v1.yml
+      - gitlab-ci-templates/common/config-updater-flux.v1.yml
+      - gitlab-ci-templates/common/config-updater-salt.v1.yml
   - project: rammearkitektur/os2mo
     file:
       - gitlab-ci-templates/integration-test-meta.v1.yml
